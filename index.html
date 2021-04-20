@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" type="text/CSS" href="CSS/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="picture" class="one"></div>
+        <ul>
+            <li rel="one"><a href="#" data-text='Home'>Home</a></li>
+            <li rel="two"><a href="#" data-text='About'>About</a></li>
+            <li rel="three"><a href="#" data-text='Team'>Team</a></li>
+            <li rel="four"><a href="#" data-text='Join'>Join</a></li>
+            <li rel="five"><a href="#" data-text='Contact'>Contact</a></li>
+            <li rel="six"><a href="#" data-text='Follow'>Follow</a></li>
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $('ul li').hover(function () {
+            $('#picture').removeClass().addClass($(this).attr('rel'));
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+    </script>
+</body>
+
+</html>
